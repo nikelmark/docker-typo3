@@ -6,7 +6,7 @@ ADD apt-source-costamagnagianfranco_ettercap-stable-backports /etc/apt/sources.l
 
 # Install packages
 RUN apt-get update && \
-apt-get -yq --force-yes install mysql-client git curl imagemagick php5-imagick && \
+apt-get -yq --force-yes install mysql-client git curl imagemagick php5-imagick vim && \
 rm -rf /var/lib/apt/lists/*
 
 RUN a2enmod rewrite
