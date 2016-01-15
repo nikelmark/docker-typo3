@@ -5,8 +5,7 @@
         "process-timeout": 1800
     },
     "authors": [
-        {
-            "name": "Johannes Goslar",
+	{ "name": "Johannes Goslar",
             "email": "johannes.goslar@dkd.de"
         },
         {
@@ -25,15 +24,11 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/kraftb/typo3_console.git"
-        },
-        {
-            "type": "composer",
-            "url": "http://composer.typo3.org/"
+            "url": "https://github.com/kraftb/typo3_console"
         }
     ],
     "require": {
         "typo3/cms": "dev-master",
-        "helhum/typo3-console": "dev-master"
+        "kraftb/typo3-console": "dev-master"
     }
 }
