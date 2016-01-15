@@ -37,4 +37,4 @@ and the new TYPO3 instance will be available at http://localhost:8080/typo3/
 Documentation
 -------------
 
-Some additioan documentation can be found here: https://wiki.typo3.org/TYPO3-Docker
+Some additional documentation can be found here: https://wiki.typo3.org/TYPO3-Docker
