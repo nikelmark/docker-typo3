@@ -1,7 +1,8 @@
 {
-    "name": "dkd/docker-typo3",
+    "name": "thinkopenat/docker-typo3",
     "config": {
-        "vendor-dir": "Packages/Libraries" 
+        "vendor-dir": "Packages/Libraries",
+        "process-timeout": 1800
     },
     "authors": [
         {
@@ -11,16 +12,28 @@
         {
             "name": "Sascha Egerer",
             "email": "sascha.egerer@dkd.de"
+        },
+        {
+            "name": "Bernhard Kraft",
+            "email": "kraftb@think-open.at"
         }
     ],
     "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://git.typo3.org/Packages/TYPO3.CMS.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/kraftb/typo3_console.git"
+        },
         {
             "type": "composer",
             "url": "http://composer.typo3.org/"
         }
     ],
     "require": {
-        "typo3/cms": "^7.6",
-        "typo3-ter/typo3-console": "*"
+        "typo3/cms": "dev-master",
+        "helhum/typo3-console": "dev-master"
     }
 }

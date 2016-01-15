@@ -1,5 +1,5 @@
 FROM tutum/apache-php:latest
-MAINTAINER Johannes Goslar
+MAINTAINER Bernhard Kraft
 
 # add source for newer CURL version that has many bugfixes required for some operations
 ADD apt-source-costamagnagianfranco_ettercap-stable-backports /etc/apt/sources.list.d/costamagnagianfranco-ettercap-stable-backports-trusty.list
