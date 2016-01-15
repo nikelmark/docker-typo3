@@ -12,13 +12,15 @@ This image is highly inspired by (tutum-docker-wordpress-nosql)[https://registry
 Usage (standalone)
 ------------------
 
+
+
 This image needs an external MySQL server or linked MySQL container. To create a MySQL container:
 
     docker run -d -e MYSQL_PASS="<your_password>" --name db -p 3306:3306 tutum/mysql:5.5
 
 To run TYPO3 by linking to the database created above:
 
-    docker run -d --link db:db -e DB_PASS="<your_password>" -p 80:80 dkdde/typo3
+    docker run -d --link db:db -e DB_PASS="<your_password>" -p 80:80 thinkopenat/typo3-git-master
 
 Now, you can use your web browser to access TYPO3 from the the follow address:
 
@@ -26,15 +28,13 @@ Now, you can use your web browser to access TYPO3 from the the follow address:
 
 User is "admin" and password is "password".
 
-Usage (as a base image)
------------------------
+When you have already an apache running on your local machine you can start the docker container differently:
 
-If you want to use it as a base image to create your customized version of TYPO3, you can do so by creating a `Dockerfile` similar to the following:
+    docker run -d --link db:db -e DB_PASS="<your_password>" -p 8080:80 thinkopenat/typo3-git-master
 
-    FROM dkdde/typo3:latest
+and the new TYPO3 instance will be available at http://localhost:8080/typo3/
 
-    # Add an initial data which will be automatically loaded when creating the database for the first time
-    ADD initial_db.sql /initial_db.sql
+Documentation
+-------------
 
-    # Add a custom composer.json
-    ADD composer.json /app/composer.json
+Some additioan documentation can be found here: https://wiki.typo3.org/TYPO3-Docker
