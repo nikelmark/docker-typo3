@@ -75,7 +75,6 @@ fi
 # Set git user name/email
 git config --system user.name "$GIT_USER_NAME"
 git config --system user.email "$GIT_USER_EMAIL"
-EDITOR=vim
 
 # Start apache in foreground if no arguments are given
 if [ $# -eq 0 ]

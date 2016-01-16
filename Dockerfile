@@ -12,6 +12,9 @@ rm -rf /var/lib/apt/lists/*
 RUN a2enmod rewrite
 ADD typo3.conf /etc/apache2/sites-enabled/000-default.conf
 
+# Add vimrc with settings for PSR
+ADD vimrc /root/.vimrc
+
 # Adjust some php settings
 ADD typo3.php.ini /etc/php5/conf.d/
 
