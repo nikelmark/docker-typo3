@@ -36,6 +36,9 @@ ENV DB_USER admin
 ENV DB_PASS **ChangeMe**
 ENV INSTALL_TOOL_PASSWORD password
 
+# Update TYPO3 souce
+RUN cd typo3_src && git pull
+
 # Enable composer autoloader in TYPO3
 ENV TYPO3_COMPOSER_AUTOLOAD 1
 
