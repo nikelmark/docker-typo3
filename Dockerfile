@@ -1,4 +1,4 @@
-FROM tutum/apache-php:latest
+FROM php:7-apache
 MAINTAINER Bernhard Kraft
 
 # add source for newer CURL version that has many bugfixes required for some operations
