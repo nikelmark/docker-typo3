@@ -24,7 +24,7 @@ VOLUME ["/app/typo3temp", "/app/uploads", "/app/fileadmin"]
 
 ADD AdditionalConfiguration.php /app/typo3conf/
 ADD composer.json /app/
-RUN composer self-update
+RUN /usr/bin/composer.phar self-update
 RUN composer install && cp typo3conf/ext/typo3_console/Scripts/typo3cms .
 
 # Add script to create 'typo3' DB
